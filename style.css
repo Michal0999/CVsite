@@ -1,0 +1,575 @@
+/* 
+    font-family: 'Space Mono', monospace;
+
+    font-family: 'Barlow', sans-serif;
+
+    font-family: 'Courgette', cursive; */
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 100%;
+  position: relative;
+  color: white;
+}
+
+#scrollDown {
+  position: absolute;
+  bottom: 6px;
+  right: calc(50% - 30px);
+  font-size: 50px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid black;
+  background-color: rgb(0, 163, 136);
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#scrollDown:hover {
+  background-color: black;
+  color: white;
+}
+
+#scrollDown i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: scrollDown 2s linear infinite;
+}
+
+@keyframes scrollDown {
+  0% {
+    top: -50%;
+    left: 50%;
+  }
+
+  100% {
+    top: 150%;
+  }
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100vh;
+  background-image: url(img/prism.png);
+  text-align: center;
+}
+
+header>h1 {
+  font-family: 'Space Mono', monospace;
+  font-size: 50px;
+  position: relative;
+  display: inline-block;
+  margin: 35px 0;
+  overflow: hidden;
+  color: rgb(241, 241, 241);
+  letter-spacing: 2px;
+}
+
+
+
+header>h1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-left: 2px solid white;
+  background-image: url(img/prism.png);
+  animation: cursor .8s linear infinite, typing 3s steps(18) both;
+}
+
+@keyframes cursor {
+  0% {
+    border-left-color: transparent;
+  }
+
+  10% {
+    border-left-color: transparent;
+  }
+
+  25% {
+    border-left: 2px solid white;
+  }
+
+  75% {
+    border-left: 2px solid white;
+  }
+
+  90% {
+    border-left-color: transparent;
+  }
+
+  100% {
+    border-left-color: transparent;
+  }
+}
+
+@keyframes typing {
+  0% {
+    top: 0;
+    left: 0;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+.headWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.myPicture {
+  flex-basis: 20%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.myPicture img {
+  width: 100%;
+}
+
+.about {
+  flex-basis: 75%;
+  height: 50%;
+  max-height: 50vh;
+}
+
+.about h2 {
+  font-family: 'Space Mono', monospace;
+  font-size: 30px;
+  padding-bottom: 15px;
+}
+
+.about p {
+  font-family: 'Barlow', sans-serif;
+  font-size: 18px;
+  padding: 0 30px;
+  text-align: justify;
+  line-height: 30px;
+}
+
+
+.links {
+  background-image: url(img/notebook-1280538_1280.jpg);
+  background-size: cover;
+  background-position: center;
+  flex-basis: 100%;
+  height: 550px;
+  display: flex;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+
+.links .media {
+  flex-basis: 25%;
+  text-align: center;
+  padding: 10px;
+}
+
+.links .media a {
+  border: 4px solid white;
+  margin: 15px 0;
+  color: white;
+  font-size: 25px;
+  padding: 5px 0;
+  display: block;
+  text-decoration: none;
+  font-family: 'Space Mono', monospace;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+  z-index: 1;
+  transition: 1s;
+}
+
+.links .media a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  transition: 1s;
+  z-index: -1;
+}
+
+.links .media a:nth-of-type(1)::after {
+  background-color: rgb(4, 167, 145);
+}
+
+.links .media a:nth-of-type(2)::after {
+  background-color: rgb(124, 0, 124);
+}
+
+.links .media a:nth-of-type(3)::after {
+  background-color: rgb(3, 73, 185);
+}
+
+.links .media a:nth-of-type(4)::after {
+  background-color: rgb(167, 4, 4);
+}
+
+.links .media a:hover::after {
+  width: 100%;
+}
+
+.links .media a:hover {
+  color: white;
+  border-color: rgb(2, 2, 2);
+}
+
+.cvButton {
+  text-transform: uppercase;
+}
+
+.quote {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote p {
+  color: rgb(253, 253, 253);
+  font-size: 45px;
+  font-family: 'Courgette', cursive;
+  transform: rotate(-5deg);
+  padding: 15px;
+  opacity: 0;
+  animation: quote 1s 2s linear both;
+}
+
+@keyframes quote {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.clock {
+  display: flex;
+  flex-basis: 100%;
+  text-align: left;
+}
+
+.clock #zegar {
+  font-family: 'Space Mono', monospace;
+  flex-basis: 40%;
+  padding: 10px;
+  font-size: 15px;
+  background-color: rgba(0, 0, 0, 0.466);
+}
+
+.clock div {
+  font-size: 20px;
+  flex-basis: 60%;
+  text-align-last: center;
+  padding-top: 25px;
+}
+
+main {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  background-image: url(img/prism.png);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.one {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 0;
+  left: 100%;
+  height: 100vh;
+  animation: projestsMove 1s 2s linear both;
+  background-image: url(img/computer-768696_1280.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+@keyframes projestsMove {
+  0% {
+    top: 0;
+    left: 100%
+  }
+
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+
+.one .titleProjects {
+  flex-basis: 15%;
+  font-family: 'Barlow', sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  letter-spacing: 5px;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.one .projectWrapp {
+  flex-basis: 85%;
+  /* background-image: url(img/dark-honeycomb.png); */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.one .projectWrapp .project {
+  flex-basis: 50%;
+  height: 50%;
+}
+
+.project h1 {
+  text-align: center;
+  padding: 5px 0;
+  font-size: 28px;
+  font-family: 'Space Mono', monospace;
+  background-color: rgba(0, 0, 0, 0.507);
+}
+
+.project p {
+  text-align: center;
+  font-family: 'Barlow', sans-serif;
+  background-color: rgba(0, 0, 0, 0.507);
+  font-size: 18px;
+  padding: 10px 5px;
+}
+
+.project .projectIMG {
+  width: 77%;
+  margin: 0 auto;
+  transition: 0.6s;
+}
+
+.projectWrapp .project:nth-of-type(2) .projectIMG {
+  width: 95%;
+}
+
+.project .projectIMG:hover {
+  opacity: 0.7;
+}
+
+.project img {
+  width: 100%;
+}
+
+.project a {
+  display: block;
+  text-decoration: none;
+  width: 40%;
+  margin: 5px auto;
+  text-align: center;
+  padding: 5px;
+  border: 3px solid black;
+  background-color: #fff;
+  color: #000;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: 'Space Mono', monospace;
+  font-weight: bold;
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+  transition: .6s;
+}
+
+.project a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  transition: .6s;
+  z-index: -1;
+  background-color: black;
+}
+
+.project a:hover::after {
+  width: 100%;
+}
+
+.project a:hover {
+  color: white;
+}
+
+
+
+.technology {
+  flex-basis: 100vh;
+  background-image: url(img/blank-1868502_640.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.technology .know {
+  flex-basis: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  color: black;
+}
+
+.technology h1 {
+  flex-basis: 100%;
+  height: 10%;
+  font-size: 40px;
+  text-align: center;
+  padding-top: 50px;
+  font-family: 'Space Mono', monospace;
+}
+
+.know .tech {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Barlow', sans-serif;
+  font-size: 35px;
+  font-weight: bold;
+  z-index: 1;
+  transition: .5s;
+  position: relative;
+}
+
+.know .tech::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  transition: 1s;
+  z-index: -1;
+}
+
+.know .tech:hover::after {
+  width: 100%;
+}
+
+.know div:nth-of-type(1)::after {
+  background-color: rgb(241, 79, 4);
+}
+
+.know div:nth-of-type(2)::after {
+  background-color: rgb(25, 125, 255);
+}
+
+.know div:nth-of-type(3)::after {
+  background-color: rgb(231, 231, 2);
+}
+
+.know div:nth-of-type(4)::after {
+  background-color: rgb(0, 194, 42);
+}
+
+.know div:nth-of-type(5)::after {
+  background-color: rgb(5, 219, 209);
+}
+
+.know div:nth-of-type(6)::after {
+  background-color: rgb(153, 0, 158);
+}
+
+.know .tech i {
+  margin-right: 15px;
+  color: black;
+  font-size: 50px;
+}
+
+
+.technology #toLearn {
+  flex-basis: 50%;
+  color: white;
+  border-top: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(68, 68, 68, 0.561);
+}
+
+#toLearn h1 {
+  flex-basis: 10%;
+  padding-top: 20px;
+}
+
+#toLearn .tech {
+  flex-basis: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+  font-weight: bold;
+  font-family: 'Barlow', sans-serif;
+}
+
+#toLearn .tech img {
+  margin-right: 20px;
+}
+
+#toLearn .tech i {
+  margin-right: 20px;
+}
+
+.contact {
+  flex-basis: 20vh;
+
+  text-align: center;
+  font-family: 'Barlow', sans-serif;
+}
+
+.contact div {
+  height: 33%;
+}
+
+.contact div i {
+  margin-right: 15px;
+}
+
+.contact div:nth-of-type(1) {
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-top: 15px 0;
+}
+
+.contact div:nth-of-type(2) {
+  font-size: 25px;
+}
+
+.contact div:nth-of-type(3) {
+  font-size: 25px;
+}
