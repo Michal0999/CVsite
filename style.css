@@ -311,7 +311,7 @@ main {
   left: 100%;
   height: 100vh;
   animation: projestsMove 1s 2s linear both;
-  background-image: url(img/one.jpg);
+  background-image: url(img/startup-593327_1280.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -340,7 +340,6 @@ main {
 
 .one .projectWrapp {
   flex-basis: 85%;
-  /* background-image: url(img/dark-honeycomb.png); */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -370,11 +369,16 @@ main {
 .project .projectIMG {
   width: 80%;
   margin: 0 auto;
+  margin-top: 5px;
   transition: 0.6s;
 }
 
 .projectWrapp .project:nth-of-type(2) .projectIMG {
   width: 80%;
+}
+
+.projectWrapp .project:nth-of-type(4) .projectIMG {
+  width: 65%;
 }
 
 .project .projectIMG:hover {
