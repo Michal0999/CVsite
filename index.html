@@ -2,145 +2,153 @@
 <html lang="pl">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Michał Konatkowski site</title>
-	<link href="https://fonts.googleapis.com/css?family=Barlow:400,700|Courgette|Space+Mono:400,700&amp;subset=latin-ext"
-		rel="stylesheet">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css"
-		integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y" crossorigin="anonymous">
-	<link rel="stylesheet" href="style.css">
-	<script src="timer.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Michał Konatkowski site</title>
+  <link href="https://fonts.googleapis.com/css?family=Barlow:400,700|Courgette|Space+Mono:400,700&amp;subset=latin-ext"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css"
+    integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="timer.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="jquery.scrollTo.min.js"></script>
+  <script>
+
+  </script>
 </head>
 
 <body onload="odliczanie();">
 
+  <button class="scrollUp">
+    <i class=" fas fa-angle-double-up"></i>
+  </button>
 
 
-	<div class="wrapper">
-		<header>
-			<h1>Michał Konatkowski</h1>
-			<div class="headWrapper">
-				<div class="myPicture">
-					<img src="img/9.jpg" alt="">
-				</div>
-				<div class="about">
-					<h2>Kilka słów o mnie.</h2>
-					<p>Mam na imię Michał i technologiami Fron-endu interesuję się ponad pół roku. Chętnie uczę się
-						nowych rzeczy,
-						a za sobą mam kilka projektów przy których głównie wykorzystałem HTML, CSS oraz JavaScript.
-						Poszukuję
-						pierwszej pracy jako Junior Fron-End Developer aby móc rozwinąć swoje umiejętności pod okiem
-						doświadczonych
-						ludzi. Jestem
-						zdania że
-						odpowiednia
-						atmosfera w pracy może wiele zdziałać i swoją skromną osobą staram się tworzyć pozytywną
-						atmosferę.</p>
-				</div>
-				<div class="links">
-					<div class="media">
-						<a target="_blank" class="cvButton" href="cv.pdf">moje CV</a>
-						<a target="_blank" href="https://github.com/Michal0999"><i class="fab fa-github"></i> GitHub</a>
-						<a target="_blank" href="https://www.facebook.com/mkonatkowski"><i class="fab fa-facebook-square"></i>
-							Facebook</a>
-						<a target="_blank"
-							href="https://www.youtube.com/channel/UCvYqwYL8FBIxkzChmVQfh1w/playlists?view_as=subscriber"><i
-								class="fab fa-youtube"></i> Youtube</a>
-					</div>
-					<div class="quote">
-						<p>"there is beauty in simplicity"</p>
-					</div>
-					<div class="clock">
-						<div id="zegar"></div>
-						<div><i class="fab fa-mandalorian"></i> Copyright © 2019 Michał Konatkowski <i
-								class="fab fa-mandalorian"></i></div>
-					</div>
-				</div>
-			</div>
+  <div class="wrapper">
+    <header>
+      <h1>Michał Konatkowski</h1>
+      <div class="headWrapper">
+        <div class="myPicture">
+          <img src="img/9.jpg" alt="">
+        </div>
+        <div class="about">
+          <h2>Kilka słów o mnie.</h2>
+          <p>Mam na imię Michał i technologiami Fron-endu interesuję się ponad pół roku. Chętnie uczę się
+            nowych rzeczy,
+            a za sobą mam kilka projektów przy których głównie wykorzystałem HTML, CSS oraz JavaScript.
+            Poszukuję
+            pierwszej pracy jako Junior Fron-End Developer aby móc rozwinąć swoje umiejętności pod okiem
+            doświadczonych
+            ludzi. Jestem
+            zdania że
+            odpowiednia
+            atmosfera w pracy może wiele zdziałać i swoją skromną osobą staram się tworzyć pozytywną
+            atmosferę.</p>
+        </div>
+        <div class="links">
+          <div class="media">
+            <a target="_blank" class="cvButton" href="cv.pdf">moje CV</a>
+            <a target="_blank" href="https://github.com/Michal0999"><i class="fab fa-github"></i> GitHub</a>
+            <a target="_blank" href="https://www.facebook.com/mkonatkowski"><i class="fab fa-facebook-square"></i>
+              Facebook</a>
+            <a target="_blank"
+              href="https://www.youtube.com/channel/UCvYqwYL8FBIxkzChmVQfh1w/playlists?view_as=subscriber"><i
+                class="fab fa-youtube"></i> Youtube</a>
+          </div>
+          <div class="quote">
+            <p>"there is beauty in simplicity"</p>
+          </div>
+          <div class="clock">
+            <div id="zegar"></div>
+            <div><i class="fab fa-mandalorian"></i> Copyright © 2019 Michał Konatkowski <i
+                class="fab fa-mandalorian"></i></div>
+          </div>
+        </div>
+      </div>
 
-		</header>
+    </header>
 
-		<main>
-			<section class="one">
-				<div class="titleProjects">Projekty</div>
-				<div class="projectWrapp">
-					<div class="project">
-						<h1>Basketball Shop layout</h1>
-						<p>Projekt sklepu ze sprzętem do koszykówki. Zarówno fron-end jak back-end. Przy użyciu PHP,
-							MySQL, HTML,
-							CSS,JavaScript, jQuery oraz RWD.</p>
-						<div class="projectIMG">
-							<img src="img/8591_jak-powinna-wygladac-strona-wizytowka-dla-_1.jpg" alt="">
-						</div>
-						<a target="blank" href="http://welovebasket.pl/">Zobacz więcej</a>
-					</div>
-					<div class="project">
-						<h1>Angular ToDo App</h1>
-						<p>Apliacja listy zadań do zrobienia przu uzyciu frameworka Angular. Lista zadań przechowywana
-							jest przy
-							pomocy
-							Firebase(cloud). P</p>
-						<div class="projectIMG">
-							<img src="img/angulartodolist.png" alt="">
-						</div>
-						<a target="blank" href="https://github.com/Michal0999/to_do_angular">Zobacz więcej</a>
-					</div>
-					<div class="project">
-						<h1>Strona wizytkówka</h1>
-						<p>Projekt mojej strony wizytkówki. Kod strony do obejrzenia na github - klinknij zobacz więcej.
-						</p>
-						<div class="projectIMG">
-							<img src="img/aaa.png" alt="">
-						</div>
-						<a target="blank" href="https://github.com/Michal0999/CVsite">Zobacz więcej</a>
-					</div>
-					<div class="project">
-						<h1>Kalkulator JavaScript</h1>
-						<p>Prosty Kalkulator z wykorzystaniem JavaScript oraz zastosowaniu Flexbox'a</p>
-						<div class="projectIMG">
-							<img src="img/calc.png" alt="">
-						</div>
-						<a target="blank" href="https://github.com/Michal0999/calc_JS">Zobacz więcej</a>
-					</div>
-				</div>
-				<button id="scrollDown"><i class="fas fa-angle-double-down"></i></button>
-			</section>
-			<section class="technology">
+    <main>
+      <section class="one">
+        <div class="titleProjects">Projekty</div>
+        <div class="projectWrapp">
+          <div class="project">
+            <h1>Basketball Shop layout</h1>
+            <p>Projekt sklepu ze sprzętem do koszykówki. Zarówno fron-end jak back-end. Przy użyciu PHP,
+              MySQL, HTML,
+              CSS,JavaScript, jQuery oraz RWD.</p>
+            <div class="projectIMG">
+              <img src="img/8591_jak-powinna-wygladac-strona-wizytowka-dla-_1.jpg" alt="">
+            </div>
+            <a target="blank" href="http://welovebasket.pl/">Zobacz więcej</a>
+          </div>
+          <div class="project">
+            <h1>Angular ToDo App</h1>
+            <p>Apliacja listy zadań do zrobienia przu uzyciu frameworka Angular. Lista zadań przechowywana
+              jest przy
+              pomocy
+              Firebase(cloud). P</p>
+            <div class="projectIMG">
+              <img src="img/angulartodolist.png" alt="">
+            </div>
+            <a target="blank" href="https://github.com/Michal0999/to_do_angular">Zobacz więcej</a>
+          </div>
+          <div class="project">
+            <h1>Strona wizytkówka</h1>
+            <p>Projekt mojej strony wizytkówki. Kod strony do obejrzenia na github - klinknij zobacz więcej.
+            </p>
+            <div class="projectIMG">
+              <img src="img/aaa.png" alt="">
+            </div>
+            <a target="blank" href="https://github.com/Michal0999/CVsite">Zobacz więcej</a>
+          </div>
+          <div class="project">
+            <h1>Kalkulator JavaScript</h1>
+            <p>Prosty Kalkulator z wykorzystaniem JavaScript oraz zastosowaniu Flexbox'a</p>
+            <div class="projectIMG">
+              <img src="img/calc.png" alt="">
+            </div>
+            <a target="blank" href="https://github.com/Michal0999/calc_JS">Zobacz więcej</a>
+          </div>
+        </div>
+        <button class="scrollDown"><i class="fas fa-angle-double-down"></i></button>
+      </section>
+      <section class="technology">
 
-				<div class="know">
-					<h1>Technologie z których korzystam</h1>
-					<div class="tech"><i class="fab fa-html5"></i> HTML</div>
-					<div class="tech"><i class="fab fa-css3-alt"></i> CSS (Flexbox, RWD)</div>
-					<div class="tech"><i class="fab fa-js-square"></i> JavaScript</div>
-					<div class="tech"><img src="https://img.icons8.com/ios/50/000000/jquery-filled.png"> jQuery</div>
-					<div class="tech"><i class="fab fa-php"></i> PHP</div>
-					<div class="tech"><i class="fab fa-bootstrap"></i> Bootstrap</div>
-				</div>
-
-
-				<div id="toLearn">
-					<h1>W trakcie nauki...</h1>
-					<div class="tech"><img src="https://img.icons8.com/color/48/000000/angularjs.png"> Angular</div>
-					<div class="tech"><img src="https://img.icons8.com/color/48/000000/firebase.png">Firebase</div>
-					<div class="tech"><img src="https://img.icons8.com/ios/50/000000/wordpress-filled.png">Wordpress
-					</div>
-					<div class="tech"><i class="fab fa-sass"></i> SASS</div>
-				</div>
+        <div class="know">
+          <h1>Technologie z których korzystam</h1>
+          <div class="tech"><i class="fab fa-html5"></i> HTML</div>
+          <div class="tech"><i class="fab fa-css3-alt"></i> CSS (Flexbox, RWD)</div>
+          <div class="tech"><i class="fab fa-js-square"></i> JavaScript</div>
+          <div class="tech"><img src="https://img.icons8.com/ios/50/000000/jquery-filled.png"> jQuery</div>
+          <div class="tech"><i class="fab fa-php"></i> PHP</div>
+          <div class="tech"><i class="fab fa-bootstrap"></i> Bootstrap</div>
+        </div>
 
 
+        <div class="toLearn">
+          <h1>W trakcie nauki...</h1>
+          <div class="tech"><img src="https://img.icons8.com/color/48/000000/angularjs.png"> Angular</div>
+          <div class="tech"><img src="https://img.icons8.com/color/48/000000/firebase.png">Firebase</div>
+          <div class="tech"><img src="https://img.icons8.com/ios/50/000000/wordpress-filled.png">Wordpress
+          </div>
+          <div class="tech"><i class="fab fa-sass"></i> SASS</div>
+        </div>
 
-			</section>
-			<section class="contact">
-				<div>Kontakt</div>
-				<div><i class="fas fa-mobile-alt"></i>Tel: +48 730 142 908</div>
-				<div><i class="far fa-envelope"></i>email: mkonatkowski@gmail.com</div>
-			</section>
-		</main>
-	</div>
 
-	<script src="script.js"></script>
+
+      </section>
+      <section class="contact">
+        <div>Kontakt</div>
+        <div><i class="fas fa-mobile-alt"></i>Tel: +48 730 142 908</div>
+        <div><i class="far fa-envelope"></i>email: mkonatkowski@gmail.com</div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
